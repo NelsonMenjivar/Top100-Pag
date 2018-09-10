@@ -1,0 +1,287 @@
+body {
+ background-color: #94bad5;
+}
+
+h1
+{
+  font-family: 'Rajdhani', sans-serif;  
+}
+h2
+{
+  font-family: 'Roboto', sans-serif;
+}
+[v-cloak] {
+  display: none;
+}
+
+#id {
+  position: relative;
+}
+
+.inputSearch {
+  width: 65vw;
+  margin: 0 auto;
+  display: flex;
+  border: 2px solid #060d13;
+  font-size: 1.3em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-radius: 5px;
+  margin-bottom: 2em;
+  background: #f0f5f5;
+  opacity: 50%;
+}
+@media screen and (max-width: 1023px) {
+  .inputSearch {
+    width: 90vw;
+  }
+}
+
+.displayButtons {
+  display: flex;
+  justify-content: center;
+  width: 65vw;
+  margin: 4em auto 3.5em;
+}
+
+.toggleAlbums {
+  border: 2px solid black;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  background-color: #e0e0eb;    
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold ;
+  font-size: 1.5em;
+  font-family: 'Rajdhani', sans-serif;
+
+  transition: 0.3s ease;
+}
+.toggleAlbums:hover {
+  border: 2px solid black;
+}
+@media screen and (min-width: 1024px) {
+  .toggleAlbums:hover {
+    transform: scale(1.1);
+  }
+}
+
+.toggleAlbumsFavorites {
+  margin-left: 1.5em;
+}
+
+.toggleAlbumsFavorites img {
+  width: 1em;
+  height: auto;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 7em;
+}
+
+.album {
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
+  border-radius: 5px;
+  list-style-type: none;
+  border: 1px solid #D3D3D3;
+  background-color: #e0e0eb;  
+  transition: 0.3s ease;
+}
+@media screen and (min-width: 1024px) {
+  .album {
+    width: 65vw;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .album {
+    width: 90vw;
+  }
+}
+.album:hover {
+  transform: scale(1.02);
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.albumImage {
+  height: 8em;
+  width: 8em;
+}
+
+.fullName {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5em;
+}
+
+.basic {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  display: flex;
+  align-items: center;
+}
+
+.triggerClick {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.favStar {
+  width: 2.5em;
+  height: auto;
+  margin-left: 1.5em;
+  transition: 0.3s ease;
+  z-index: 20;
+}
+.favStar:hover {
+  transform: scale(1.1);
+}
+
+.openArrow {
+  width: 2em;
+  height: auto;
+  float: right !important;
+  margin-left: auto;
+  margin-right: 3em;
+  transition: transform 0.5s ease;
+  transform: rotate(0);
+}
+.flipArrow {
+  transform: rotate(180deg);
+}
+
+.detailed {
+  transition: 0.5s ease;
+  height: 0;
+  width: 100%;
+  background-color: #F0F0F0;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.active {
+  background-color: #F0F0F0;
+  height: 9em;
+}
+
+.link {
+  width: 2em;
+  height: auto;
+  margin: 0 auto;
+  transition: 0.3s ease;
+}
+.link:hover {
+  transform: scale(1.2);
+}
+
+.price {
+  border-right: 1px solid #C9C9C9;
+}
+
+.date {
+  border-left: 1px solid #C9C9C9;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 570px) and (max-width: 1023px) {
+  body {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 569px) {
+  body {
+    font-size: 8px;
+  }
+}
+h1 {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 3em;
+}
+@media screen and (max-width: 1023px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+.place {
+  font-size: 3em;
+  font-weight: bold;
+  width: 1.7em;
+  text-align: center;
+}
+
+.albumTitle {
+  font-weight: bold;
+}
+
+.albumTitle,
+.artist {
+  font-size: 1.3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 30vw;
+}
+@media screen and (min-width: 570px) and (max-width: 1023px) {
+  .albumTitle,
+.artist {
+    width: 45vw;
+  }
+}
+@media screen and (max-width: 569px) {
+  .albumTitle,
+.artist {
+    width: 30vw;
+  }
+}
+
+.showName {
+  white-space: normal;
+  text-overflow: inherit;
+}
+
+.detailedSpan {
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  color: #343434;
+}
+
+.detailedSpanTitle {
+  font-size: 0.8em;
+  color: #616161;
+}
+
+a {
+  color: #343434;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #343434;
+  text-decoration: none;
+  transform: scale(1.2);
+}
+
+.noFavorites {
+  font-size: 1.5em;
+}
+
+
